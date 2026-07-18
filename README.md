@@ -327,6 +327,17 @@ uipro init --ai claude --global   # Install to ~/.claude/skills/
 uipro init --ai cursor --global   # Install to ~/.cursor/skills/
 ```
 
+**From this repository (Claude Code):** installs the skill exactly as it exists in your checkout — including any local changes — instead of the published npm version. No Node.js required.
+
+```bash
+git clone https://github.com/alexandersolheim89/ui-ux-pro-max-skill.git
+cd ui-ux-pro-max-skill
+scripts/install-global.sh              # macOS / Linux
+scripts\install-global.ps1             # Windows (PowerShell)
+```
+
+The skill is copied to `~/.claude/skills/ui-ux-pro-max/` and is then auto-activated in every project on the machine. Re-run the script after `git pull` to update, or pass `--uninstall` (bash) / `-Uninstall` (PowerShell) to remove it.
+
 ### Other CLI Commands
 
 ```bash
