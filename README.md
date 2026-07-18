@@ -338,6 +338,8 @@ scripts\install-global.ps1             # Windows (PowerShell)
 
 The skill is copied to `~/.claude/skills/ui-ux-pro-max/` and is then auto-activated in every project on the machine. Re-run the script after `git pull` to update, or pass `--uninstall` (bash) / `-Uninstall` (PowerShell) to remove it.
 
+This fork also bundles a brand harmonization layer: on Minselfie-related tasks the skill applies the Minselfie design system (`references/minselfie-brand.md`) instead of generic database recommendations. See the "Brand Harmonization" section in `SKILL.md`.
+
 ### Other CLI Commands
 
 ```bash
