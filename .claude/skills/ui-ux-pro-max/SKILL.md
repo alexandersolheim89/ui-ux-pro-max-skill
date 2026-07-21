@@ -13,6 +13,16 @@ Use this Skill when the task involves **UI structure, visual design decisions, i
 
 Skip it for pure backend logic, API/database design, non-visual performance work, infrastructure/DevOps, or non-visual scripts — unless the task changes how something **looks, feels, moves, or is interacted with**.
 
+## Brand Harmonization: Minselfie
+
+If the task is **Minselfie-related** — minselfie.no, the photobooth rental business, its Elementor/WordPress site, Mailjet emails, booking flow, landing pages, campaigns, ads, or social templates — read `references/minselfie-brand.md` **before** making any visual recommendation, and let it override the database:
+
+- **Overridden by the brand file:** colors, typography (Fraunces + DM Sans only), radii (pill buttons), spacing scale, motion timings, icon style (Lucide 1.75px), component styling, and Norwegian copy/tone rules. Do not suggest palettes, font pairings, or UI styles from the database for these dimensions — present the brand tokens as the design system instead.
+- **Still from the database:** UX guidelines and accessibility (`--domain ux`), landing-page structure (`--domain landing`), chart advice (`--domain chart`), GSAP mechanics (`--domain gsap`, but use the brand's easing/duration tokens), and stack guidelines (`--stack`).
+- If a `minselfie-ui` skill is available in the environment, it is the more authoritative and current source — defer to it on any conflict with the bundled brand file.
+
+For non-Minselfie projects this section does not apply; use the normal workflow below.
+
 ## Rule Categories by Priority
 
 *Follow priority 1→10 to decide which category to focus on first; use `--domain <Domain>` to query full details. The full rule text for every category lives in `references/quick-reference.md` — read it on demand rather than loading it every time.*
