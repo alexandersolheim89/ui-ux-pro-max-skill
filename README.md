@@ -289,6 +289,8 @@ uipro init --ai warp        # Warp
 uipro init --ai augment     # Augment
 uipro init --ai codewhale   # CodeWhale
 uipro init --ai zcode       # ZCode
+uipro init --ai amazonq     # Amazon Q Developer
+uipro init --ai openclaw    # OpenClaw (.agents/skills/)
 uipro init --ai universal   # Universal / Agent Standard (.agents/skills/)
 uipro init --ai all         # All assistants
 ```
@@ -346,7 +348,7 @@ If it is missing, install it yourself from [python.org](https://www.python.org/d
 
 ### Skill Mode (Auto-activate)
 
-**Supported:** Claude Code, Cursor, Windsurf, Antigravity, Codex CLI, Continue, Gemini CLI, OpenCode, Qoder, CodeBuddy, Droid (Factory), KiloCode, Warp, Augment, CodeWhale, ZCode
+**Supported:** Claude Code, Cursor, Windsurf, Antigravity, Codex CLI, Continue, Gemini CLI, OpenCode, Qoder, CodeBuddy, Droid (Factory), KiloCode, Warp, Augment, CodeWhale, ZCode, Amazon Q Developer, OpenClaw, GitHub Copilot
 
 The skill activates automatically when you request UI/UX work. Just chat naturally:
 
@@ -358,7 +360,7 @@ Build a landing page for my SaaS product
 
 ### Workflow Mode (Slash Command)
 
-**Supported:** Kiro, GitHub Copilot, Roo Code, KiloCode
+**Supported:** Kiro, Roo Code, KiloCode
 
 Use the slash command to invoke the skill:
 
@@ -407,11 +409,19 @@ The skill provides stack-specific guidelines for:
 
 Just mention your preferred stack in the prompt, or let it default to HTML + Tailwind.
 
+## Examples
+
+### Before/after: ops dashboard
+
+A plain ops dashboard ([before](https://skill-fixture-before.theroost.dev)) restyled using only the design system UI UX Pro Max generated for it ([after](https://ui-ux-pro-max-after.theroost.dev)), from `search.py "internal operations dashboard" --design-system --density 8 --motion 3 --variance 4`.
+
+*Illustrative, community-contributed example; not an official demo, benchmark, or runtime test of the skill.*
+
 ## Design System Command (Advanced)
 
 For direct access to the design system generator:
 
-> Note: If you installed via Continue, replace `.claude/skills/` with `.continue/skills/` in the commands below. For Droid (Factory), use `.factory/skills/`. For ZCode, use `.zcode/skills/`.
+> Note: If you installed via Continue, replace `.claude/skills/` with `.continue/skills/` in the commands below. For Droid (Factory), use `.factory/skills/`. For ZCode, use `.zcode/skills/`. For Amazon Q Developer, use `.amazonq/skills/` (Amazon Q only auto-loads the rule at `.amazonq/rules/ui-ux-pro-max.md`; the data and scripts under `.amazonq/skills/` are files the rule points to).
 
 ```bash
 # Generate design system with ASCII output
